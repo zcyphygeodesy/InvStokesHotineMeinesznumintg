@@ -16,7 +16,7 @@ Using the inverse Stokes, Hotine or Vening-Meinesz operation, compute the field 
 ## (1) Module for numerical integral of inverse operation on residual field element
     InversenumIntegral(calcpntfl,dwmhgrdfl,gravgrdfl,knd,dr)
     The output file reslt.txt, whose record format: Behind the input calculation point file record, appends a column of ellipsoidal height of the calculation point interpolated from the ellipsoidal height grid of the equipotential surface and a column of integral value of the residual gravity anomaly when knd=0, a column of integral value of the residual gravity disturbance when knd=1, or 3 columns of attributes including the residual height anomaly, gravity anomaly and gravity disturbance when knd=2.
-## (2) Module for numerical integral of radial gradient on residual field element
+## (2) Module for numerical integral of radial gradient operation on residual field element
     real*8 function RaGradientBLH(BLH,gra,dwm,nlat,nlon,hd,dr,GRS)
     Input parameters: BLH(3) - longitude (decimal degrees), latitude (decimal degrees), ellipsoidal height (m) of the calculation point.
     Input parameters: dwm(nlat,nlon) - the ellipsoidal height grid of the equipotential boundary surface, which employed to calculate the integral distance.
@@ -35,7 +35,7 @@ Using the inverse Stokes, Hotine or Vening-Meinesz operation, compute the field 
     Input parameters: hgt(nlat,nlon) - the ellipsoidal height  grid on the surface of field element.
     Return parameters: tx(2) - the first-order horizontal gradient vector (NE, in unit of /m) at the calculation point.
 ## (5) Calculation module for the normal gravity field
-    normdjn(GRS,djn); GNormalfd(BLH,NFD,GRS)
+    GNormalfd(BLH,NFD,GRS)
     Return parameters: NFD(5) - the normal geopotential (m2/s2), normal gravity (mGal), normal gravity gradient (E), normal gravity line direction (', expressed by its north declination relative to the center of the Earth center of mass) or normal gravity gradient direction (', expressed by its north declination relative to the Earth center of mass).
 ## (6) Calculation module for Legendre functions and their derivatives to ψ
     LegPn_dt2(pn,dp1,dp2,n,t) ! t=cos ψ
