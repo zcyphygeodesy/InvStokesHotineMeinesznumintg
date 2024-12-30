@@ -6,6 +6,7 @@ Using the inverse Stokes, Hotine or Vening-Meinesz operation, compute the field 
     The integral of inverse operation formula belongs to the solution of the Stokes boundary value problem, which requires the integrand height anomaly or vertical deflection to be on the equipotential surface, and .
     It is usually necessary to employ the remove-restore scheme with a reference geopotential model to use the finite radius for gravity field integral. Firstly, remove the model values of source field element on the equipotential boundary surface, then compute the residual values of target field element at the calculation point by integral of inverse operation, and finally restore the model values of target field element at the calculation point.
     The equipotential surface can be constructed from a global geopotential model (not greater than 360 degrees), which can also be represent by a normal (orthometric) equiheight surface with the altitude of not more than ten kilometers.
+![](https://24192633.s21i.faiusr.com/2/ABUIABACGAAg7_zltwYoqNzxqwEwpQ047gg.jpg)
 ## [Main program for test entrance]
     InvStokesHotineMeinesznumintg.f90
     Input parameters: knd - type of inverse operation. knd=0 for inverse Stokes, knd=1 for inverse Hotine operation and knd=1 for inverse Vening-Meinesz operation.
@@ -55,3 +56,4 @@ Using the inverse Stokes, Hotine or Vening-Meinesz operation, compute the field 
     7.9.3 Integral formula of inverse operation of anomalous gravity field element
     7.1(4) Low-dgree Legendre function and its first and second derivative algorithms
 The zip compression package in the attachment includes the test project in visual studio 2017 - intel fortran integrated environment, DOS executable test file and all input and output data.
+![](https://24192633.s21i.faiusr.com/2/ABUIABACGAAg8OzltwYoiNSwCjClDTjuCA.jpg)
